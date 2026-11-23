@@ -47,3 +47,12 @@ For each of **Baiterek, Khan Shatyr, Main Mosque**:
 
 ## D. Regression after CX-04 / CX-05 / TO-05 fixes
 Re-run A: `python -m http.server 8768` in this folder, then `node tests/e2e.mjs <temp folder>` (needs Edge), plus section B or C for the functions each fix touched.
+
+## E. Re-run on the live site (GitHub Pages, HTTPS) — 23 Nov 2026: 26/26 PASS
+The 22 checks above plus 4 regression checks for this build:
+- the Progress page without a route shows an empty state;
+- AR opened from a direct link: Close stays on the site;
+- a phone number in `8 7XX…` format is accepted;
+- desktop website layout: the header is visible and the map is in split view.
+
+Command: `BASE=https://mansbusinessacc-bit.github.io/astana-ar-tour/index.html node tests/e2e.mjs <temp folder>`
